@@ -7,10 +7,10 @@ class MainComponent extends Component{
             age: props.age
         };
     }
-    flipSwitch = () => {
+    addAgeCount = () => {
         this.setState({age: this.state.age+1})
     }
-    dSwitch = () => {
+    subAgeCount = () => {
         this.setState({age: this.state.age-1})
     }
     render(){
@@ -20,8 +20,8 @@ class MainComponent extends Component{
                 <h1>{lastName}, {firstName}</h1>
                 <p>Age: {this.state.age}</p>
                 <p>Hair Color: {hairColor}</p>
-                <button className="btn btn-primary" onClick={ this.flipSwitch }>Birthday Button for {firstName} {lastName}</button>
-                <button className="btn btn-primary m-3" onClick={ this.dSwitch }>-1</button>
+                <button className="btn btn-primary" onClick={ this.addAgeCount }>Birthday Button for {firstName} {lastName}</button>
+                <button className="btn btn-primary m-3" onClick={ this.subAgeCount }>-1</button>
             </div>
         );
     }
